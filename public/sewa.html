@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="author" content="Sabrina" />
+  <meta name="description" content="Lorem ipsum dolor sit amet" />
+  <meta name="viewport"
+    content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+  <title>BCR - Binar Car Rental</title>
+
+  <!-- Example CSS -->
+  <link href="./css/style.example.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="container-fluid hero-section">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light header-nav" style="background-color: #F1F3FF;">
+      <div class="container-fluid fixed-top headnav-additional" style="background-color: #F1F3FF;">
+        <a class="navbar-brand" href="#">
+          <img src="./images/logo.png" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item ms-4">
+              <a class="nav-link menu-nav text-end mt-2" aria-current="page" href="#our-services"
+                style="color: black;">Our
+                Services</a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link menu-nav text-end mt-2" href="#why-us" style="color: black;">Why Us</a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link menu-nav text-end mt-2" href="#testimonial" style="color: black;">Testimonial</a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link menu-nav text-end mt-2 mb-2" href="#faq" style="color: black;">FAQ</a>
+            </li>
+            <li class="nav-item ms-4">
+              <a class="nav-link text-end" href="#">
+                <button class="btn btn-success menu-nav" type="submit"
+                  style="background-color: #5CB85F;">Register</button>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- offcanvas -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasWithBothOptions"
+          aria-labelledby="offcanvasWithBothOptionsLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel" style="font-weight: bold;">BCR</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="navbar-nav ms-auto">
+              <ul>
+                <li><a href="#our-services">Our Services</a></li>
+                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#testimonial">Testimony</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li class="nav-item">
+                  <button class="btn btn-success menu-nav" type="submit"
+                    style="background-color: #5CB85F;">Register</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- end offcanvas -->
+      </div>
+    </nav>
+    <!-- end of navbar -->
+
+    <!-- hero section -->
+    <div class="container-fluid hero-section-content pt-5">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 mb-5">
+          <p class="content-first">Sewa & Rental Mobil Terbaik di kawasan Jakarta</p>
+          <p class="content-mid">Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik dengan
+            harga
+            terjangkau. Selalu
+            siap melayani kebutuhanmu untuk sewa mobil selama 24 jam.</p>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <img class="img-fluid " src="images/img_car.png" alt="hero-img">
+        </div>
+      </div>
+    </div>
+    <!-- end of hero section -->
+  </div>
+
+  <!-- form -->
+  <div class="container form">
+    <div class="row">
+      <div class="col-md-3">
+        <label for="">Tipe Driver</label>
+        <div class="input-group mb-3">
+          <select class="form-select" id="tipe-driver">
+            <option selected disabled hidden>Pilih Tipe Driver</option>
+            <option value="ds">Dengan Sopir</option>
+            <option value="ts">Tanpa Sopir (Lepas Kunci)</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <label for="">Tanggal</label>
+        <div class="input-group mb-3">
+          <input id="date" type="date" class="form-control">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <label for="">Waktu Jemput/Ambil</label>
+        <div class="input-group mb-3">
+          <input id="time" type="time" class="form-control">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <label for="">Jumlah Penumpang (optional)</label>
+        <div class="input-group mb-3">
+          <input id="capacity" type="number" class="form-control" placeholder="Jumlah Penumpang" min="0" max="10">
+        </div>
+      </div>
+      <div class="row justify-content-center mt-3">
+        <div class="col-md-2">
+          <div class="d-grid gap-2">
+            <!-- <button class="btn btn-success" type="submit" style="background-color: #5CB85F;">Cari
+              Mobil</button> -->
+            <button id="load-btn" type="button" class="btn btn-success">Cari Mobil</button>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="d-grid gap-2">
+            <button id="clear-btn" type="button" class="btn btn-danger">Clear</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of form -->
+
+  <!-- <button id="load-btn">Load</button>
+  <button id="clear-btn">Clear</button> -->
+
+  <!-- display data -->
+  <div class="container mt-4">
+    <div class="row" id="cars-container">
+
+    </div>
+  </div>
+
+
+  <!-- footer -->
+  <div class="container footer mt-5 mb-4">
+    <div class="row">
+      <div class="col-md-3 col-sm-12">
+        <p class="ms-2 footer-address">Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</p>
+        <p class="ms-2">binarcarrental@gmail.com</p>
+        <p class="ms-2">081-233-334-808</p>
+      </div>
+      <div class="col-md-3 col-sm-12">
+        <a class="footer-nav ms-sm-2 ms-md-5" href="#our-services">Our services</a>
+        <a class="footer-nav ms-sm-2 mt-3 ms-md-5" href="#why-us">Why Us</a>
+        <a class="footer-nav ms-sm-2 mt-3 ms-md-5" href="#testimonial">Testimonial</a>
+        <a class="footer-nav ms-sm-2 mt-3 ms-md-5" href="#faq">FAQ</a>
+      </div>
+      <div class="col-md-3 col-sm-12">
+        <p class="ms-2 mt-sm-2 mt-md-0">Connect with us</p>
+        <img class="img-fluid ms-2" src="images/icon_facebook.png" alt="fb-logo">
+        <img class="img-fluid ms-2" src="images/icon_instagram.png" alt="ig-logo">
+        <img class="img-fluid ms-2" src="images/icon_twitter.png" alt="twit-logo">
+        <img class="img-fluid ms-2 mt-sm-2 mt-lg-0" src="images/icon_mail.png" alt="mail-logo">
+        <img class="img-fluid ms-2 mt-sm-2 mt-xl-0" src="images/icon_twitch.png" alt="twitch-logo">
+      </div>
+      <div class="col-md-3 col-sm-12">
+        <p class="ms-2 mt-sm-2 mt-md-0">Copyright Binar 2022</p>
+        <img class="ms-2" src="images/logo.png" alt="logo">
+      </div>
+    </div>
+  </div>
+  <!-- end of footer -->
+
+  <!-- Example Javascript -->
+  <script type="text/javascript" src="./scripts/binar.js"></script>
+  <script type="text/javascript" src="./scripts/app.example.js"></script>
+  <script type="text/javascript" src="./scripts/car.example.js"></script>
+  <script type="text/javascript" src="./scripts/main.example.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
